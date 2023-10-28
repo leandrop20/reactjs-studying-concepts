@@ -1,0 +1,19 @@
+{
+    "name": "reactjs-studying-concepts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/leandrop20/reactjs-studying-concepts.git"
+    },
+    "author": "Leandro Pinheiro",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/leandrop20/reactjs-studying-concepts/issues"
+    },
+    "homepage": "https://github.com/leandrop20/reactjs-studying-concepts#readme"
+}
