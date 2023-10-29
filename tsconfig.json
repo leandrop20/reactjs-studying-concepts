@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "outDir": "./dist/",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "allowJs": true,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noFallthroughCasesInSwitch": true,
+        "sourceMap": true,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "es2017",
+        "module": "es2020",
+        "lib": [
+            "es2020",
+            "dom"
+        ]
+    }
+}
