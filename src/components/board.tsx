@@ -1,14 +1,12 @@
-import * as React from 'react';
-import { useState } from 'react';
 import './board.scss';
+
+import * as React from 'react';
 import Square from './square';
+import { GameRules } from '../utils/GameRules';
 
-export default function Board() {
-    const [xIsNext, setXIsNext] = useState<boolean>(true);
-    const [squares, setSquares] = useState<any[]>(Array(9).fill(null));
-
+export default function Board({ xIsNext, squares, onPlay }: any) {
     function handleClick(i: number) {
-        if (squares[i]) return;
+        if (GameRules.calculateWinner(squares) || squares[i]) return;
 
         const nextSquares = squares.slice();
 
@@ -18,12 +16,21 @@ export default function Board() {
             nextSquares[i] = 'O';
         }
 
-        setSquares(nextSquares);
-        setXIsNext(!xIsNext);
+        onPlay(nextSquares);
+    }
+
+    const winner = GameRules.calculateWinner(squares);
+    let status: string;
+
+    if (winner) {
+        status = `Winner: ${winner}`;
+    } else {
+        status = `Next player: ${xIsNext ? 'X' : 'O'}`;
     }
 
      return (
         <>
+            <div className='status'>{status}</div>
             <div className='board-row'>
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
                 <Square value={squares[1]} onSquareClick={() => handleClick(1)} />

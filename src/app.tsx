@@ -1,9 +1,11 @@
+import './app.scss';
+
 import * as React from 'react';
 import { useState } from 'react';
 import List from './list';
 import Button from './button';
 import SharingData from './sharingData';
-import Board from './components/board';
+import Game from './components/game';
 
 export function App() {
     const [count, setCount] = useState(0);
@@ -20,7 +22,7 @@ export function App() {
             <br />
             <SharingData count={count} onClick={handleClick} />
             <SharingData count={count} onClick={handleClick} />
-            <Board />
+            <Game />
         </>
     );
 }
