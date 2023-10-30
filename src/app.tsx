@@ -6,6 +6,8 @@ import List from './list';
 import Button from './button';
 import SharingData from './sharingData';
 import Game from './components/game';
+import Reducer from './components/reducer';
+import Context from './components/context';
 
 export function App() {
     const [count, setCount] = useState(0);
@@ -23,6 +25,9 @@ export function App() {
             <SharingData count={count} onClick={handleClick} />
             <SharingData count={count} onClick={handleClick} />
             <Game />
+            <br/>
+            <Reducer />
+            <Context />
         </>
     );
 }
